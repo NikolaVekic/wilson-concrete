@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+/* ---- PeopleFirst (Figma exacts with responsive sanity) ---- */
+:root {
+  --pf-font: "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Title */
+.pf-title {
+  width: 100%;
+  max-width: 840px; /* Figma width */
+  height: auto; /* ignore hard height; use line-height */
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--pf-font);
+  font-weight: 750; /* Figma says 750 / 85 Heavy */
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+@media (max-width: 768px) {
+  .pf-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .pf-title {
+    font-size: 30px;
+  }
+}
+
+/* Subtext */
+.pf-subtext {
+  width: 100%;
+  max-width: 1132px; /* Figma width */
+  margin: 16px auto 0;
+  text-align: center;
+  font-family: var(--pf-font);
+  font-weight: 500; /* 65 Medium */
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #111827; /* neutral-900-ish */
+}
+.pf-subtext strong {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .pf-subtext {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .pf-subtext {
+    font-size: 16px;
+  }
+}
+
+/* Red blocks */
+.pf-card {
+  background: #f50a13; /* Figma color */
+  border-radius: 18px; /* Figma radius */
+  width: 320px; /* Figma width */
+  height: 130px; /* Figma height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* subtle depth; remove if Figma strictly flat */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.pf-card-text {
+  font-family: var(--pf-font);
+  font-weight: 700; /* 75 Bold */
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .pf-card {
+    width: 100%;
+    max-width: 320px;
+    height: 110px;
+  }
+  .pf-card-text {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .pf-card {
+    height: 96px;
+  }
+  .pf-card-text {
+    font-size: 20px;
+  }
+}
+
+/* Keep content above any backgrounds */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* Optional legacy background stack (unused). Keep off the content. */
+.bg-stack {
+  position: absolute;
+  inset: 0;
+}
+.bg-stack > img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* ===== Global pill buttons ===== */
+.button-pill {
+  width: 156px;
+  height: 48px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Inputs ===== */
+.input-pill {
+  height: 53px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.message-pill {
+  height: 106px; /* 2x height */
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  resize: none;
+}
+
+.input-pill,
+.message-pill {
+  width: 100%; /* <-- was 554px */
+}
+
+/* Inputs text/placeholder */
+.input-base,
+.textarea-base {
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 12px 18px;
+  font-size: 16px;
+  color: #1f2937; /* gray-800 */
+}
+.input-base::placeholder,
+.textarea-base::placeholder {
+  color: #c4c4c4;
+}
+
+textarea {
+  resize: none; /* Disables resizing in all directions */
+}
+
+/* Send button */
+.send-pill {
+  width: 140px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fff;
+  font-weight: 700;
+  color: #dc2626; /* red-600 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Utility from earlier */
+.skew-wrap {
+  transform: skewX(-10deg);
+}
+.skew-content {
+  transform: skewX(10deg);
+}
+.shadow-card {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Full-bleed: stretch a section to the viewport, ignoring the page container */
+.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Optional: larger max width than your 1440 canvas so it visually “goes off” it */
+.full-bleed-inner {
+  max-width: 1800px; /* tweak to your taste */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card look to match your comps */
+.gallery-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* hide scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* PeopleFirst red cards */
+.feature-pill {
+  background: #e10613; /* vivid red; tweak if you have a brand hex */
+  border-radius: 18px;
+  min-height: 96px; /* visual weight similar to mock */
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 768px) {
+  .feature-pill {
+    min-height: 110px;
+    border-radius: 20px;
+    padding: 24px 28px;
+  }
+}
