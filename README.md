@@ -4,10 +4,14 @@
 A mobile-friendly business website built with React and Tailwind CSS, featuring a modern, unique design and a fast contact/quote workflow.
 Includes a reusable contact form that sends submissions directly to email (Web3Forms), optimized for performance across devices.
 
-✨ Features
-📱 Mobile-First Responsive Design: Looks great on phones, tablets, and desktop.
+✨ **Features**
+
+📱 Mobile-First Responsive Design: Looks great on phones, tablets, and desktop. 
+
 🎨 Modern UI: Clean, unique layout with bold hero sections and strong CTA flow.
+
 📩 Email Contact Forms: Reusable form component with instant email delivery (Web3Forms).
+
 🧩 Component-Based Structure: Shared UI blocks for easy maintenance and scaling.
 
 🛠️ Tech Stack
