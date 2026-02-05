@@ -7,11 +7,8 @@ Includes a reusable contact form that sends submissions directly to email (Web3F
 ✨ **Features**
 
 📱 Mobile-First Responsive Design: Looks great on phones, tablets, and desktop. 
-
 🎨 Modern UI: Clean, unique layout with bold hero sections and strong CTA flow.
-
 📩 Email Contact Forms: Reusable form component with instant email delivery (Web3Forms).
-
 🧩 Component-Based Structure: Shared UI blocks for easy maintenance and scaling.
 
 🛠️ Tech Stack
