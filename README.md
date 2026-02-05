@@ -1,4 +1,4 @@
-<img width="2564" height="5945" alt="screencapture-wilsonconcreteandcoatings-2026-02-05-13_36_35" src="https://github.com/user-attachments/assets/d97483df-ccea-4ba0-8f50-c1b1dfefc631" />
+<img width="2564" height="5945" alt="screencapture-wilsonconcreteandcoatings-2026-02-05-13_36_35 (1)" src="https://github.com/user-attachments/assets/fccd03ca-845f-4673-bd2c-c61c5f58c6ed" />
 
 
 A mobile-friendly business website built with React and Tailwind CSS, featuring a modern, unique design and a fast contact/quote workflow.
